@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Snowman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body  >
+
+<div class="snowman" style="left: 600px; top:100px" onmousewheel="return zoomImg(this)" >
+  <div class="hat">
+    <div class="hat-top"></div>
+    <div class="hat-bottom"></div>
+  </div>
+  <div class="head">
+    <div class="eye">
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+    </div>
+    <div class="eye">
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+      <div class="eye-pins"></div>
+    </div>
+    <div class="nose"></div>
+    <div class="mouse"></div>
+  </div>
+  <div class="scarf"></div>
+  <div class="arm-left">
+    <div class="arm-left-finger"></div>
+    <div class="arm-left-finger"></div>
+  </div>
+  <div class="arm-right">
+    <div class="arm-right-finger"></div>
+    <div class="arm-right-finger"></div>
+  </div>
+  <div class="body">
+  <audio src="audio/1.mp3" id="myaudio" controls="controls" loop="false" hidden="true">
+    </audio>
+    <div class="button" onclick="autoPlay()"></div>
+    <div class="button" onclick="closePlay()"></div>
+    <div class="button"></div>
+    <div class="button"></div>
+  </div>
+</div>
+
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+  <div class="snow"></div>
+</body>
+<script src="style/style.js"></script>
+
+<!-- 雪花效果 -->
+<script src="style/snowflakes.min.js"></script>
+<script>
+  var sf = new Snowflakes({
+          color: "#fff",
+          count: 90,
+          minOpacity: 0.6,
+          maxOpacity: 1,
+          minSize:20,
+          maxSize:26
+        });        
+</script>
+
+</html>
